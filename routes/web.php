@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () { return view('posts.allposts') });
+
+/*ADD A POST*/
+Route::match(['get','post'],'/addpost','PostController@add')->name('post.addposts');
